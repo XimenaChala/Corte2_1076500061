@@ -1,0 +1,22 @@
+@startuml Autospersonas
+
+class Autospersonas{
+    - int id
+    - String marca
+    - String modelo
+    - String color
+    - int anio_fabricacion
+    - String placa
+    - Personas personas
+}
+
+class Personas{
+    - int id
+    - String nombre
+    - String telefono
+    - String correo
+    - Autospersonas[] autospersonas
+}
+
+Autospersonas "1" -- "*" Personas : tiene
+@enduml
